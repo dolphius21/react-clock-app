@@ -1,7 +1,10 @@
-const SidebarItem = () => {
+const SidebarItem = ({ name, iconSrc }) => {
   return (
     <>
-      <li className="sidebar-item"></li>
+      <li className="sidebar-item">
+        <img className="sidebar-icons" src={iconSrc} alt={name} />
+        {name}
+      </li>
     </>
   );
 };
