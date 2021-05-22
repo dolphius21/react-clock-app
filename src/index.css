@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 /*
 =============== 
 Variables
@@ -7,13 +7,14 @@ Variables
 :root {
   --main-clr-blue: #00d9f6;
   --clr-light-grey: #6c7589;
-  --clr-dark-grey: #1f2633;
+  --clr-mid-grey: #1e2536;
+  --clr-dark-grey: #141b27;
   --clr-black: #0e121b;
   --clr-white: #ffffff;
-  --transition: all 0.3s linear;
+  --transition: all 0.5s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --light-shadow: 0 5px 15px rgba(0, 217, 246, 0.5);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
@@ -31,7 +32,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Montserrat', sans-serif;
   background: var(--clr-black);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -102,16 +103,67 @@ Sidebar
   left: 0;
   width: 250px;
   height: 100vh;
-  background: var(--clr-black);
+  background: var(--clr-dark-grey);
   border-right: 1px solid var(--clr-dark-grey);
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 1px 45px -9px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 1px 45px -9px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 45px -9px rgba(0, 0, 0, 0.25);
 }
 .sidebar-header {
-  text-align: center;
   padding: 1rem;
 }
 .sidebar-header h1 {
   font-size: 2rem;
   color: var(--main-clr-blue);
+}
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  color: var(--clr-light-grey);
+  padding: 0.75rem 0;
+  transition: var(--transition);
+  fill: var(--clr-light-grey);
+  cursor: pointer;
+}
+.active {
+  color: var(--main-clr-blue);
+  fill: var(--main-clr-blue);
+}
+.sidebar-item:hover {
+  background: var(--clr-mid-grey);
+  color: var(--clr-light-grey);
+  fill: var(--clr-light-grey);
+}
+.sidebar-item svg {
+  display: block;
+  margin-left: 1rem;
+}
+.sidebar-item p {
+  display: block;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  font-weight: 400;
+}
+.space {
+  flex: 1;
+}
+.social-container {
+  padding: 1rem;
+}
+.social-container p {
+  color: var(--clr-light-grey);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.social-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.social-icons-container a {
+  color: var(--clr-light-grey);
+  font-size: 2rem;
 }
